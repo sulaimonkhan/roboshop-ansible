@@ -1,10 +1,10 @@
-- name: Copy Systemnd File
-  ansible.builtin.copy:
+- name: Copy SystemnD File
+  ansible.builtin.template:
     src: "{{ component }}.service"
     dest:  /etc/systemd/system/{{ component }}.service
 
-- name: Start {{ component }} service
-  ansible.builtin.systemd: 
+- name: Start {{ component }} Service
+  ansible.builtin.systemd:
     name: "{{ component }}"
     state: restarted
     enabled: yes
