@@ -1,5 +1,5 @@
 - name: Install Redies Repos
-  ansibile.builtin.yum:
+  ansible.builtin.yum:
     name: https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
     state: installed
     disable_gpg_check: true
