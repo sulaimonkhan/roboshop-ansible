@@ -1,0 +1,9 @@
+- name: Lode NodeJS
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: Nodejs 
+
+- name: Load schema setup
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: mongo_schema_setup    
