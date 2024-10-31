@@ -2,7 +2,7 @@
   ansible.builtin.copy:
     dest: /etc/yum.repos.d/mongodb.repo
 
-- name: Install mongoDB Server
+- name: Install MongoDB Server
   ansibile.builtin.dnf:
     name: mongodb-org
     state: installed
