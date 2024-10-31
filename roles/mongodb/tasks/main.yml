@@ -3,10 +3,10 @@
     dest: /etc/yum.repos.d/mongodb.repo
 
 - name: Install MongoDB Server
-  ansibile.builtin.dnf:
+  ansible.builtin.dnf:
     name: mongodb-org
     state: installed
-
+    
 - name: Update MongoDB listen address
   ansible.builtin.replace:
     path: /etc/mongod.conf
